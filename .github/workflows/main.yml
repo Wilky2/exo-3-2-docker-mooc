@@ -31,4 +31,4 @@ jobs:
 # Étape pour appeler le webhook Render
     - name: Trigger Render Deploy Hook
       run: |
-        curl -X GET https://api.render.com/deploy/some-deploy-hook-id
+        curl -X GET ${{ vars.RENDER_DEPLOY_HOOK }}
