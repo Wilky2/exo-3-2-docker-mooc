@@ -9,6 +9,8 @@ RUN yum install -y tar && yum install -y gzip
 
 COPY . .
 
+RUN chmod +x ./mvnw
+
 RUN ./mvnw package
 
 ENTRYPOINT ["java"]
